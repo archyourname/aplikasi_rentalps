@@ -1,8 +1,5 @@
-# /=================================================================\
-# ||                                                                ||
-# ||=============          APLIKASI RENTALPS          ============= ||
-# ||                                                                ||
-# \=================================================================/
+APLIKASI RENTALPS
+
 # Aplikasi rentalps by RAFFY VIBTO RAMADHAN & NESA KUSUMA BARATA
 
 *Aplikasi ini dibuat untuk melengkapi tugas Pertemuan 9 Fundamental Pemprograman Object - RAFFY VIBTO RAMADHAN(2514010064), NESA KUSUMA BARATA(2514010096)* 
