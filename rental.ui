@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1003</width>
+    <height>837</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Aplikasi RentalPS</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow,QWidget{background:#262A2E;color:#F2F4F5;font-family:'Segoe UI';}
+QGroupBox{background:#2F353B;border:1px solid #4B5663;border-radius:6px;
+margin-top:12px;padding-top:12px;color:#7F8A96;font-weight:bold;}
+QGroupBox::title{subcontrol-origin:margin;left:10px;padding:0 4px;}
+QLabel{color:#00FFE5;background:transparent;font-weight:bold;}
+QLineEdit,QTextEdit,QComboBox{
+ background:#1F2429;border:1px solid #4B5663;color:white;padding:6px;}
+QTextEdit{border:2px solid #00FFE5;}
+QPushButton{
+ background:#2F353B;border:2px solid #00FFE5;color:#00FFE5;
+ min-height:34px;font-weight:bold;border-radius:4px;}
+QPushButton:hover{background:#374049;}
+QTableWidget{
+ background:#1F2429;border:1px solid #4B5663;
+ gridline-color:#4B5663;color:white;}
+QHeaderView::section{
+ background:#2F353B;color:#00FFE5;padding:6px;border:none;}
+QLabel#lblTitle{font-size: 42px; color:#00FFE5; margin-bottom:10px;}
+QLabel#lblSubtitle{font-size: 18px; color:#F2F4F5; margin-bottom:30px;}
+QMenuBar { background-color: #1F2429; color: white; border-bottom: 1px solid #4B5663;}
+QMenuBar::item { background-color: transparent; padding: 6px 14px; }
+QMenuBar::item:selected { background-color: #374049; color: #00FFE5; }
+QMenu { background-color: #2F353B; color: white; border: 1px solid #4B5663; }
+QMenu::item { padding: 8px 24px; }
+QMenu::item:selected { background-color: #374049; color: #00FFE5; }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_landing">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <spacer name="verticalSpacer_top">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblTitle">
+          <property name="text">
+           <string>APLIKASI JAWARAPS</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblSubtitle">
+          <property name="text">
+           <string>Disclaimer! Program ini milik JawaraPS, Program ini hanya boleh diakses pemilik/pengurus JawaraPS saja</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <spacer name="horizontalSpacer_left">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnGoDashboard">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>38</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>KLIK KALAU KAMU ADMIN</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_right">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <spacer name="horizontalSpacer_left_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnBukanAdmin">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>38</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton { background-color: #2F353B; color: #E63946; font-weight: bold; border-radius: 4px; border: 2px solid #E63946; } QPushButton:hover { background-color: #374049; }</string>
+            </property>
+            <property name="text">
+             <string>KLIK! JIKA KAMU BUKAN ADMIN</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_right_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_bottom">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_dashboard">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0" colspan="2">
+         <widget class="QLabel" name="lblDashboardTitle">
+          <property name="styleSheet">
+           <string notr="true">font-size: 28px; color: #00FFE5; margin-bottom: 15px; font-weight: bold;</string>
+          </property>
+          <property name="text">
+           <string>DASHBOARD DATA MEMBER</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupForm">
+          <property name="title">
+           <string>MASUKKAN DATA DISINI</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="lblNama">
+             <property name="text">
+              <string>Nama</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="editNama096"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="lblJam">
+             <property name="text">
+              <string>Jaminan</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="editJaminan096"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="lblTanggalMulai">
+             <property name="text">
+              <string>Tanggal Rental</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QDateEdit" name="dateMulai096">
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="lblTanggalSelesai">
+             <property name="text">
+              <string>Tanggal Berakhir</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDateEdit" name="dateSelesai096">
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="lblWa">
+             <property name="text">
+              <string>No WhatsApp</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="editWa096"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="lblAlamat">
+             <property name="text">
+              <string>Alamat</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QTextEdit" name="textAlamat096"/>
+           </item>
+           <item row="6" column="1">
+            <widget class="QPushButton" name="btnSimpan096">
+             <property name="text">
+              <string>SIMPAN</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QGroupBox" name="groupTable">
+          <property name="title">
+           <string>DATA LENGKAP MEMBER JAWARAPS</string>
+          </property>
+          <layout class="QVBoxLayout" name="vbox">
+           <item>
+            <widget class="QTableWidget" name="tableWidget096">
+             <column>
+              <property name="text">
+               <string>Nama</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Jaminan</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Member</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>WhatsApp</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Alamat</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="buttons">
+             <item>
+              <widget class="QPushButton" name="btnEdit096">
+               <property name="text">
+                <string>EDIT</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnDelete096">
+               <property name="text">
+                <string>DELETE</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_membership">
+       <layout class="QGridLayout" name="gridLayout_membership">
+        <item row="0" column="0" colspan="2">
+         <widget class="QLabel" name="lblMembershipTitle">
+          <property name="styleSheet">
+           <string notr="true">font-size: 28px; color: #00FFE5; margin-bottom: 15px; font-weight: bold;</string>
+          </property>
+          <property name="text">
+           <string>DATA MEMBERSHIP</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupMembershipForm">
+          <property name="title">
+           <string>DAFTARKAN MEMBER BARU DISINI</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout_membership">
+           <item row="0" column="0">
+            <widget class="QLabel" name="lblPelanggan">
+             <property name="text">
+              <string>Pilih Pelanggan</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="opsiPelanggan064"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="lblTipePS">
+             <property name="text">
+              <string>Tipe PS</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="opsiTipePS064">
+             <item>
+              <property name="text">
+               <string>PS2 (Rp 10.000/hari)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>PS3 (Rp 20.000/hari)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>PS4 (Rp 30.000/hari)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>PS5 (Rp 40.000/hari)</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="lblDiskonTier">
+             <property name="text">
+              <string>Pilih Tier/Diskon</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="opsiTier064">
+             <item>
+              <property name="text">
+               <string>No Member - 0%</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Bronze - 10%</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Silver - 20%</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Gold - 30%</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Platinum - 40%</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="lblTglGabung">
+             <property name="text">
+              <string>Tanggal Transaksi</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QDateEdit" name="memberGabung064">
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="lblIncludeTV">
+             <property name="text">
+              <string>Include TV?</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="lblJasaAntar">
+             <property name="text">
+              <string>Jasa Antar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="lblJarak">
+             <property name="text">
+              <string>Jarak (KM)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QSpinBox" name="jarak064">
+             <property name="maximum">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QPushButton" name="simpanMember064">
+             <property name="text">
+              <string>SIMPAN</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QPushButton" name="btnMaster064">
+             <property name="text">
+              <string>LIHAT TRANSAKSI</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QCheckBox" name="cekTV064">
+             <property name="text">
+              <string>Ya (+Rp 15.000/hari)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QCheckBox" name="kurir064">
+             <property name="text">
+              <string>Pakai Jasa Pengantaran</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QGroupBox" name="groupMembershipTable">
+          <property name="title">
+           <string>ABSEN YANG SUDAH MEMBERSHIP</string>
+          </property>
+          <layout class="QVBoxLayout" name="vbox_membership">
+           <item>
+            <widget class="QTableWidget" name="tableMembership064">
+             <column>
+              <property name="text">
+               <string>Pilih</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Nama Pelanggan</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Tier/Diskon</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Tipe PS</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Include TV</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Antar (KM)</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Total Biaya</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="buttons_membership">
+             <item>
+              <widget class="QPushButton" name="editMember064">
+               <property name="text">
+                <string>EDIT</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="hpsMember064">
+               <property name="text">
+                <string>DELETE</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_transaksi">
+       <layout class="QVBoxLayout" name="verticalLayout_transaksi">
+        <item>
+         <widget class="QLabel" name="lblTransaksiTitle">
+          <property name="styleSheet">
+           <string notr="true">font-size: 28px; color: #00FFE5; margin-bottom: 15px; font-weight: bold;</string>
+          </property>
+          <property name="text">
+           <string>DATABASE PELANGGAN (MASTER)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupTransaksiTable">
+          <property name="title">
+           <string>DATA TRANSAKSI KESELURUHAN</string>
+          </property>
+          <layout class="QVBoxLayout" name="vbox_transaksi_table">
+           <item>
+            <widget class="QTableWidget" name="tableTransaksi">
+             <column>
+              <property name="text">
+               <string>Pilih</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Nama Pelanggan</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Tipe PS</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Total Biaya</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="buttons_transaksi">
+             <item>
+              <widget class="QPushButton" name="btnKembaliTransaksi">
+               <property name="text">
+                <string>KEMBALI</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnEditPelangganDb">
+               <property name="text">
+                <string>EDIT DATA PELANGGAN</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnEditMembershipDb">
+               <property name="text">
+                <string>EDIT DATA MEMBERSHIP</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1003</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuApp">
+    <property name="title">
+     <string>Beranda</string>
+    </property>
+    <addaction name="actionLanding_Page"/>
+   </widget>
+   <widget class="QMenu" name="menuManage">
+    <property name="title">
+     <string>Panel Admin</string>
+    </property>
+    <addaction name="actionDashboard"/>
+    <addaction name="actionMembership"/>
+    <addaction name="actionTransaksi"/>
+   </widget>
+   <addaction name="menuApp"/>
+   <addaction name="menuManage"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLanding_Page">
+   <property name="text">
+    <string>Landing Page</string>
+   </property>
+  </action>
+  <action name="actionDashboard">
+   <property name="text">
+    <string>Dashboard Member</string>
+   </property>
+  </action>
+  <action name="actionMembership">
+   <property name="text">
+    <string>Data Membership</string>
+   </property>
+  </action>
+  <action name="actionTransaksi">
+   <property name="text">
+    <string>Database Pelanggan</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
